@@ -197,9 +197,9 @@ def is_odd(n):
     
 def is_factor(f,n):
     if n%f == 0:
-        return "true"
+        return True
     elif n%f > 0:
-        return "false"
+        return False
 
     
     
