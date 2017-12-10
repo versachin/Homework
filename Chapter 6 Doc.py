@@ -57,10 +57,17 @@ def test_suite():
     
     print("\nis_even")
     test(is_even(4) == "even")
-    test(is_even(5) == "odd")
+    test(is_even(5) == "not even")
     test(is_even(0) == "even")
-    test(is_even(5001) == "odd")
+    test(is_even(5001) == "not even")
     test(is_even(500) == "even")
+    
+    print("\nis_odd")
+    test(is_odd(4) == "not odd")
+    test(is_odd(5) == "odd")
+    test(is_odd(0) == "not odd")
+    test(is_odd(5001) == "odd")
+    test(is_odd(500) == "not odd")
     
     print("\nhours_in")
     test(hours_in(9010) == 2)
@@ -71,6 +78,14 @@ def test_suite():
     print("\nseconds_in")
     test(seconds_in(9010) == 10)
     
+    print("\nis_factor")
+    test(is_factor(3, 12))
+    test(not is_factor(5, 12))
+    test(is_factor(7, 14))
+    test(not is_factor(7, 15))
+    test(is_factor(1, 15))
+    test(is_factor(15, 15))
+    test(not is_factor(25, 15))
     
 def seconds_in(num):
     """the left over seconds represented by a total number of seconds"""
@@ -168,11 +183,26 @@ def is_even(n):
     if n%2 == 0:
         return "even"
     elif n%2 > 0:
-        return "odd"
+        return "not even"
     else:
-        return "please enter and integer"
+        return "please enter an integer"
     
-     
+def is_odd(n):
+    if is_even(n) == "not even":
+        return "odd"
+    elif is_even(n) == "even":
+        return "not odd"
+    else:
+        return "please enter an integer"
+    
+def is_factor(f,n):
+    if n%f == 0:
+        return "true"
+    elif n%f > 0:
+        return "false"
+
+    
+    
  
     
     
