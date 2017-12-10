@@ -87,6 +87,22 @@ def test_suite():
     test(is_factor(15, 15))
     test(not is_factor(25, 15))
     
+    print("\nis_multiple")
+    test(is_multiple(12, 3))
+    test(is_multiple(12, 4))
+    test(not is_multiple(12, 5))
+    test(is_multiple(12, 6))
+    test(not is_multiple(12, 7))
+    
+    print("\nf2c")
+    test(f2c(212) == 100)     
+    test(f2c(32) == 0)        
+    test(f2c(-40) == -40)     
+    test(f2c(36) == 2)
+    test(f2c(37) == 3)
+    test(f2c(38) == 3)
+    test(f2c(39) == 4)
+    
 def seconds_in(num):
     """the left over seconds represented by a total number of seconds"""
     hours_out = hours_in(num)
@@ -200,6 +216,20 @@ def is_factor(f,n):
         return True
     elif n%f > 0:
         return False
+
+def is_multiple (m,n):
+    if m%n == 0:
+        return True
+    elif m%n > 0:
+        return False
+
+def f2c(t):
+    return round((t-32)/1.8)
+    
+    
+
+
+
 
     
     
