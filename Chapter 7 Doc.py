@@ -1,4 +1,26 @@
-mylist = {0, 2, 3, 7, 11, 12}
+import sys
+def test(did_pass):
+    """  Print the result of a test.  """
+    linenum = sys._getframe(1).f_lineno   # Get the caller's line number.
+    if did_pass:
+        msg = "Test at line {0} ok.".format(linenum)
+    else:
+        msg = ("Test at line {0} FAILED.".format(linenum))
+    print(msg)
+    
+
+def test_suite():
+    """ Run the suite of tests for code in this module (this file).
+    """
+    test(sumexeven_even(mylist) == 34)
+    
+    test(sam(samlist)== 1)
+    
+
+samlist = {"molly", "sam"}
+mylist = {3, 7, 2, 11, 12}
+
+listletters = {"hello", "my", "name"}
 
 mymixedlist = {0, -2, -4, 7, 9, -1}
  
@@ -23,3 +45,28 @@ def sum_neg(numlist):
             negsum =  negsum+i
     return negsum
 
+def five_letters(letterlist):
+    w= 0
+    for i in letterlist:
+        if len(i) == 5:
+            words = words+1
+    return words
+
+def sumexeven_even(numlist):
+    count = 0
+    for i in numlist:
+        if i%2==0:
+            break
+        else:
+            count = count + i
+    return count
+def sam(namelist):
+    count = 0
+    for i in namelist:
+        if i == "sam":
+            count = count+1
+            break
+        
+
+
+test_suite() 
