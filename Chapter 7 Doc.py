@@ -1,4 +1,7 @@
 import sys
+import turtle
+wn = turtle.Screen()
+s = turtle.Turtle()
 def test(did_pass):
     """  Print the result of a test.  """
     linenum = sys._getframe(1).f_lineno   # Get the caller's line number.
@@ -81,6 +84,24 @@ def newtsqrt(n):
         approx = better
 
 print("sqrt",newtsqrt(25.0))
+
+def drunk_pirate(t,a,d):
+    
+    
+    
         
         
+
+
+
+
+
+
+
+
+
+
+
+
+
 test_suite() 
