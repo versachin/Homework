@@ -12,7 +12,7 @@ def test(did_pass):
 def test_suite():
     """ Run the suite of tests for code in this module (this file).
     """
-    test(sumexeven_even(mylist) == 34)
+    test(sum_to_even(mylist)==10)
     
     test(sam(samlist)== 1)
     
@@ -52,20 +52,24 @@ def five_letters(letterlist):
             words = words+1
     return words
 
-def sumexeven_even(numlist):
-    count = 0
-    for i in numlist:
-        if i%2==0:
+
+def sum_to_even(nlist):
+    sum = 0
+    for i in nlist:
+        if i % 2 == 0:
             break
         else:
-            count = count + i
-    return count
+            sum+=i
+    return sum
 def sam(namelist):
     count = 0
     for i in namelist:
         if i == "sam":
             count = count+1
             break
+        
+        count = count+1
+    return count
         
 
 
