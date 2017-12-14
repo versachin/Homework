@@ -70,7 +70,17 @@ def sam(namelist):
         
         count = count+1
     return count
+
+def newtsqrt(n):
+    approx = n/2
+    while True:
+        better = (approx + n/approx)/2.0
+        print("better",better)
+        if abs(approx - better) < 0.001:
+             return better
+        approx = better
+
+print("sqrt",newtsqrt(25.0))
         
-
-
+        
 test_suite() 
