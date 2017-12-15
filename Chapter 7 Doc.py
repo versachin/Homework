@@ -20,7 +20,8 @@ def test_suite():
     print("nis_prime")
     test(is_prime(11) == "prime")
     test(is_prime(12) == "composite")
-    
+    test(is_prime(1000000000000000100101001011010101020000010201020102010220001024646460) == "composite")
+    test(is_prime(10589) == "prime")
 
 samlist = {"molly", "sam"}
 mylist = {3, 7, 2, 11, 12}
@@ -90,6 +91,8 @@ def is_prime(n):
             return "composite"
         else:
             return "prime"
+        
+
         
     
 
