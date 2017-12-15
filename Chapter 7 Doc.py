@@ -1,7 +1,5 @@
 import sys
-import turtle
-wn = turtle.Screen()
-s = turtle.Turtle()
+
 def test(did_pass):
     """  Print the result of a test.  """
     linenum = sys._getframe(1).f_lineno   # Get the caller's line number.
@@ -18,6 +16,10 @@ def test_suite():
     test(sum_to_even(mylist)==10)
     
     test(sam(samlist)== 1)
+    
+    print("nis_prime")
+    test(is_prime(11) == "prime")
+    test(is_prime(12) == "composite")
     
 
 samlist = {"molly", "sam"}
@@ -77,15 +79,21 @@ def sam(namelist):
 def newtsqrt(n):
     approx = n/2
     while True:
-        better = (approx + n/approx)/2.0
-        print("better",better)
-        if abs(approx - better) < 0.001:
-             return better
+        better = (approx + n/approx)/2
+        if abs(better - approx) < .001:
+            return better
         approx = better
 
-print("sqrt",newtsqrt(25.0))
+def is_prime(n):
+    for i in range(2,n):
+        if n%i == 0:
+            return "composite"
+        else:
+            return "prime"
+        
+    
 
-def drunk_pirate(t,a,d):
+
     
     
     
