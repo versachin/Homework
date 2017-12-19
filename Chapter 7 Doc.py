@@ -67,6 +67,7 @@ def sum_to_even(nlist):
         else:
             sum+=i
     return sum
+
 def sam(namelist):
     count = 0
     for i in namelist:
