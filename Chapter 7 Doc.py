@@ -92,6 +92,20 @@ def is_prime(n):
         else:
             return "prime"
         
+import turtle
+wn = turtle.Screen()
+s = turtle.Turtle()
+pirate = [(160, 20), (-43, 10), (270, 8), (-43, 12)]
+for (a, m) in pirate:
+    s.left(360-a)
+    s. forward(m)
+xX_house_Xx = [(90,100), (330, 100), (240,100), (240,100), (135,140.2), (135,100), (135,140.2), (135,100)]   
+
+for (a, m) in xX_house_Xx:
+    s.left(a)
+    s.forward(m)
+    
+        
 
         
     
