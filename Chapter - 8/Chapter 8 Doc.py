@@ -11,16 +11,26 @@ for letter in prefixes:
 def count_letters(word,letter):
     count = 0
     for char in word:
-        if char == letter
+        if char == letter:
             count += 1
     return count
+#Problem 4
+def find(string, char, start=0):
+    ix=start
+    while ix < len(string):
+        if string[ix] == char:
+            return ix
+        ix+=1
+    return -1
 
-count_letters("soup","o")
+
+
+print(count_letters("oooooooooooofbfkdfv","o"))
 
 #Problem 7
-def reverse(word):
-    for char in word:
-        new_word = word[len(word)] + word[len(word)-1] + word[len(word)-2] +
+#def reverse(word):
+    #for char in word:
+        #new_word = word[len(word)] + word[len(word)-1] + word[len(word)-2] +
 
 
 
