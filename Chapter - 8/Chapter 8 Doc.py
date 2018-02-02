@@ -15,7 +15,7 @@ def count_letters(word,letter):
             count += 1
     return count
 #Problem 4
-def find(string, char, start=0):
+def find2(string, char, start=0):
     ix=start
     while ix < len(string):
         if string[ix] == char:
