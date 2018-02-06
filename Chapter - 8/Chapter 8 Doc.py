@@ -46,17 +46,21 @@ def find2(string, char, start=0):
     return -1
 
 
-numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,2021,22,23,24,25,26]
+
 
 print(count_letters("oooooooooooofbfkdfv","o"))
 
 #Problem 7
 def reverse(word):
-    s = len(word)
-    while s > 0:
-        print(word[s-1])
-        s-=1
+    reversed = ""
+    for i in range(len(word) -1, -1, -1):
+        reversed += word[i]
+    return reversed
+
 reverse("poof")
+
+
+
 
 
 
