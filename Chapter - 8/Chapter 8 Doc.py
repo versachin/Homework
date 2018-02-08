@@ -31,8 +31,8 @@ def test_suite():
     test(remove_letter("a", "banana") == "bnn")
     test(remove_letter("z", "banana") == "banana")
     test(remove_letter("i", "Mississippi") == "Msssspp")
-    test(remove_letter("b", "") = "")
-    test(remove_letter("b", "c") = "c")
+    test(remove_letter("b", " ") == " ")
+    test(remove_letter("b", "c") == "c")
 
 
 prefixes = "JKLMNOPQ"
@@ -84,10 +84,14 @@ def mirror(word):
 
 #Problem 9
 def remove_letter(letter, word):
+    count = 0
+    new_word = ""
     for i in word:
-        if i == letter:
-            word = word[i:i+1]
-    return word
+        if i != letter:
+            new_word += word[count:count+1]
+        count += 1
+    return new_word
+
 
 
 
