@@ -4,8 +4,8 @@ tuplist=("Julia", "Roberts", 1967, "Duplicity", 2009, "Actress", "Atlanta, Georg
 
 
 
-def f(ar1):
-    print(ar1[::-1])
+def f(tup):
+    print(tup[0])
 f(tuplist)
 
 #YES it is possible
