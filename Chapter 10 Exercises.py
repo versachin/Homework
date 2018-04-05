@@ -13,7 +13,7 @@ wn.title("Traffic Turtle")
 wn.bgcolor("lightgreen")
 grotto = turtle.Turtle()
 
-def draw_housing(grotto):
+def draw_housing():
     grotto.pensize(3)
     grotto.color("black","darkgrey")
     grotto.begin_fill()
@@ -25,6 +25,14 @@ def draw_housing(grotto):
     grotto.left(90)
     grotto.end_fill()
 
-draw_housing(grotto)
+draw_housing()
+
+grotto.penup()
+grotto.forward(40)
+grotto.left(90)
+grotto.forward(50)
+grotto.shape("circle")
+grotto.shapesize(3)
+grotto.fillcolor("green")
 
 
