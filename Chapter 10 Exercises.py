@@ -1,12 +1,4 @@
 import turtle
-
-
-
-
-
-
-
-
 turtle.setup(400,500)
 wn = turtle.Screen()
 wn.title("Traffic Turtle")
@@ -35,4 +27,28 @@ grotto.shape("circle")
 grotto.shapesize(3)
 grotto.fillcolor("green")
 
+state_num = 0
 
+
+def advance_state_machine():
+    global state_num
+    if state_num == 0:
+        grotto.forward(70)
+        grotto.fillcolor("orange")
+        state_num = 1
+        wn.ontimer(advance_state_machine, 500)
+    elif state_num == 1:
+        grotto.forward(70)
+        grotto.fillcolor("red")
+        wn.ontimer(advance_state_machine, 3000)
+        state_num = 2
+    else:
+        grotto.back(140)
+        grotto.fillcolor("green")
+        wn.ontimer(advance_state_machine, 3000)
+        state_num = 0
+advance_state_machine()
+
+
+wn.listen()
+wn.mainloop()
